@@ -112,7 +112,10 @@
         </div>
         <div class="col-lg-11 modal-content col-lg-offset-2">
             <br/><br/>
-            <input type="submit" class="btn btn-success pull-right" value="发布预约"/><br/><br/>
+            <a class="btn btn-success pull-right" href="publish_order.html">发布预约</a><br/><br/>
+            <div class="col-lg-9 col-lg-offset-1 modal-content" id="news">
+
+            </div>
             <div id="2">
                 <table class="table table-striped table-hover" >
                     <caption class="text-center">已经预约</caption>
@@ -132,11 +135,11 @@
                     <tr>
                         <td>2002-01-12</td>
                         <td>13:00-13:30</td>
-                        <td>张三</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">接受</button></td>
+                        <td><button class="btn btn-default">接受</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-1">详情</button></td>
                     </tr>
                     <tr>
@@ -146,7 +149,7 @@
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">接受</button></td>
+                        <td><button class="btn btn-default">接受</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-2">详情</button></td>
                     </tr>
                     <tr>
@@ -156,7 +159,7 @@
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">拒绝</button></td>
+                        <td><button class="btn btn-default">拒绝</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-3">详情</button></td>
                     </tr>
                     <tr>
@@ -166,7 +169,7 @@
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">接受</button></td>
+                        <td><button class="btn btn-default">接受</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-4">详情</button></td>
                     </tr>
                     <tr>
@@ -176,7 +179,7 @@
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">拒绝</button></td>
+                        <td><button class="btn btn-default">拒绝</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-5">详情</button></td>
                     </tr>
                     <tr>
@@ -186,7 +189,7 @@
                         <td>已接受</td>
                         <td>综合楼</td>
                         <td>机器学习</td>
-                        <td><button class="btn btn-default">接受</button></td>
+                        <td><button class="btn btn-default">接受</button><button class="btn btn-default">拒绝</button></td>
                         <td><button class="md-trigger btn btn-default" data-modal="modal-6">详情</button></td>
                     </tr>
                     </tbody>
@@ -295,8 +298,8 @@
         table_td.eq(4).width(_width*0.1);
         table_th.eq(5).width(_width*0.25);
         table_td.eq(5).width(_width*0.25);
-        table_th.eq(6).width(_width*0.05);
-        table_td.eq(6).width(_width*0.05);
+        table_th.eq(6).width(_width*0.12);
+        table_td.eq(6).width(_width*0.12);
         table_th.eq(7).width(_width*0.05);
         table_td.eq(7).width(_width*0.05);
     })

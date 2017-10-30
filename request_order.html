@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><请求预约></请求预约></title>
+    <title>请求预约</title>
 
     <!--bootstrap 和 jquery,jquery-ui 引入-->
     <link href="static/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -26,6 +26,16 @@
     </style>
 </head>
 <body background="static/image/681662.jpg">
+<div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-content">
+        <h3>确认取消预约</h3>
+        <div class="text-center">
+            <p>确认请求取消8:00-8:30预约？</p>
+            <a class="btn btn-default" href="request_order.html">确认</a>
+            <a class="md-close btn btn-default">取消</a>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-2 modal-content" id="left">
@@ -65,27 +75,13 @@
                     </thead>
                     <tbody style="display:block;overflow-y: scroll;" id="request_table">
                     <tr>
-                    <td>全部</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="md-trigger btn btn-default" data-modal="modal-0">取消全部预约</a></td>
-                    <td><div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="all_check">
-                        </label>
-                    </div></td>
-                    </tr>
-                    <tr>
                         <td>8:00-8:30</td>
                         <td>未预约</td>
                         <td>综合楼</td>
                         <td>李志琛</td>
                         <td>18845897065</td>
                         <td>机器学习</td>
-                        <td><a class="btn btn-default">取消预约</a></td>
+                        <td><a class=" md-trigger btn btn-default" data-modal="modal-1">取消预约</a></td>
                         <td><div class="checkbox">
                             <label>
                                 <input type="checkbox">
@@ -99,7 +95,7 @@
                         <td>李志琛</td>
                         <td>18845897065</td>
                         <td>机器学习</td>
-                        <td><a class="btn btn-default">取消预约</a></td>
+                        <td><a class="btn btn-default md-trigger" data-toggle="modal-2">取消预约</a></td>
                         <td><div class="checkbox">
                             <label>
                                 <input type="checkbox">
@@ -250,14 +246,6 @@
         $(this).addClass("hidden");
         $("#follow").removeClass("hidden");
     });
-    $("#all_check").click(function(){
-        if($(this).is(':checked')){
-            $("input[type='checkbox']").attr("checked","true");
-        }
-        else{
-            $("input[type='checkbox']").removeAttr("checked");
-        }
-    })
 </script>
 </body>
 </html>

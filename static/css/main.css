@@ -75,6 +75,13 @@
 #date_button{
     height:45px;
 }
+#news{
+    display:block;
+    height:200px;
+    overflow-y: scroll;
+    border:1px solid #000;
+    margin-bottom:30px;
+}
 /*密码强度*/
 .pw-strength {clear: both;position: relative;top: 8px;width: 180px;}
 .pw-bar{background: url(../image/pwd-1.png) no-repeat;height: 14px;overflow: hidden;width: 179px;}
