@@ -326,6 +326,25 @@
 </div><!-- /container -->
 <div class="md-overlay"></div><!-- the overlay element -->
 
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0"><tr><td align="left">
+    <!--select标签和input外面的span标签的格式是为了使两个位置在同一位置，控制位置-->
+<span style="position:absolute;border:1pt solid #c1c1c1;overflow:hidden;width:188px;height:19px;clip:rect(-1px 190px 190px 170px);">
+<select name="aabb" id="aabb" style="width:190px;height:20px;margin:-2px;"
+        onChange="javascript:document.getElementById('ccdd').value=document.getElementById('aabb').options[document.getElementById('aabb').selectedIndex].value;">
+    <!--下面的option的样式是为了使字体为灰色，只是视觉问题，看起来像是注释一样-->
+    <option value="" style="color:#c2c2c2;">---请选择---</option>
+    <option value="闲人书库">闲人书库</option>
+    <option value="闲人BLOG">闲人BLOG</option>
+    <option value="闲人设计">闲人设计</option>
+    <option value="闲人软件">闲人软件</option>
+</select>
+</span>
+<span style="position:absolute;border-top:1pt solid #c1c1c1;border-left:1pt solid #c1c1c1;border-bottom:1pt solid #c1c1c1;width:170px;height:19px;">
+<input type="text" name="ccdd" id="ccdd" value="可选择也可输入的下拉框" style="width:170px;height:15px;border:0pt;">
+</span>
+
+</td></tr></table>
 <!-- classie.js by @desandro: https://github.com/desandro/classie -->
 <script src="static/niftyModal/js/classie.js"></script>
 <script src="static/niftyModal/js/modalEffects.js"></script>

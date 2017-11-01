@@ -11,7 +11,7 @@
     <link href="static/css/main.css" type="text/css" rel="stylesheet">
 
 </head>
-<body background="static/image/681662.jpg">
+<body>
 
 <div class="container">
     <div class="center-block">
@@ -94,6 +94,17 @@
 <script src="static/js/jquery-3.1.1.min.js"></script>
 <script src="static/bootstrap/js/bootstrap.min.js"></script>
 <script>
+    var password_show=false;
+    $("#eye").click(function(){
+        if(password_show==false){
+            password_show=true;
+            $("#signup_password1").attr("type","text");
+        }
+        else{
+            password_show=false;
+            $("#signup_password1").attr("type","password")
+        }
+    })
     $("#signup_password1").blur(function(){
         if($(this).val().length<6){
             $("#password_message").removeClass("hidden");
