@@ -1,30 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nifty Modal Window Effects</title>
+    <title>学生个人主页</title>
+
+    <link rel="shortcut icon" href="static/image/favicon.ico">
+    <!--bootstrap 和 jquery,jquery-ui 引入-->
+    <link href="static/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="static/css/main.css" type="text/css" rel="stylesheet">
+    <link href="static/css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+
+    <!--nifty 动态弹出框引入-->
     <link rel="stylesheet" type="text/css" href="static/niftyModal/css/component.css" />
     <script src="static/niftyModal/js/modernizr.custom.js"></script>
+
+    <!--临时css设置-->
+    <style>
+        #left{
+            position: fixed;
+            padding-top:40px;
+            padding-bottom:40px;
+        }
+    </style>
 </head>
 <body>
-<!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+<!--弹出框-->
 <div class="md-modal md-effect-1" id="modal-1">
     <div class="md-content">
-        <h3>Modal Dialog</h3>
+        <h3>预约详情</h3>
         <div>
-            <p>This is a modal window. You can do the following things with it:</p>
+            <p><strong>已接受</strong></p>
             <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                <li><strong>预约时间：</strong>8:00-9:00</li>
+                <li><strong>预约教师：</strong>张岩</li>
+                <li><strong>预约教师联系方式：</strong>15896565635</li>
+                <li><strong>预约教师邮箱：</strong>154589@qq.com</li>
+                <li><strong>预约地点：</strong>正心楼201</li>
+                <li><strong>预约主题：</strong>实验预约</li>
             </ul>
-            <button class="md-close">Close me!</button>
+            <button class="md-close btn btn-default">确认</button>
         </div>
     </div>
 </div>
-<div class="md-modal md-effect-2" id="modal-2">
+<div class="md-modal md-effect-1" id="modal-2">
+    <div class="md-content">
+        <h3>预约详情</h3>
+        <div>
+            <p><strong>未接受</strong></p>
+            <ul>
+                <li><strong>预约时间：</strong>8:00-9:00</li>
+                <li><strong>预约教师：</strong>张岩</li>
+                <li><strong>预约教师联系方式：</strong>15896565635</li>
+                <li><strong>预约教师邮箱：</strong>154589@qq.com</li>
+                <li><strong>预约地点：</strong>正心楼201</li>
+                <li><strong>预约主题：</strong>实验预约</li>
+            </ul>
+            <button class="md-close btn btn-default">确认</button>
+        </div>
+    </div>
+</div>
+<div class="md-modal md-effect-1" id="modal-3">
+    <div class="md-content">
+        <h3>预约详情</h3>
+        <div>
+            <p><strong>被拒绝</strong></p>
+            <ul>
+                <li><strong>预约时间：</strong>8:00-9:00</li>
+                <li><strong>预约教师：</strong>张岩</li>
+                <li><strong>预约教师联系方式：</strong>15896565635</li>
+                <li><strong>预约教师邮箱：</strong>154589@qq.com</li>
+                <li><strong>预约地点：</strong>正心楼201</li>
+                <li><strong>预约主题：</strong>实验预约</li>
+            </ul>
+            <button class="md-close btn btn-default">确认</button>
+        </div>
+    </div>
+</div>
+<div class="md-modal md-effect-1" id="modal-4">
     <div class="md-content">
         <h3>Modal Dialog</h3>
         <div>
@@ -34,11 +88,11 @@
                 <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
                 <li><strong>Close:</strong> click on the button below to close the modal.</li>
             </ul>
-            <button class="md-close">Close me!</button>
+            <button class="md-close btn btn-default">确认</button>
         </div>
     </div>
 </div>
-<div class="md-modal md-effect-3" id="modal-3">
+<div class="md-modal md-effect-1" id="modal-5">
     <div class="md-content">
         <h3>Modal Dialog</h3>
         <div>
@@ -48,314 +102,297 @@
                 <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
                 <li><strong>Close:</strong> click on the button below to close the modal.</li>
             </ul>
-            <button class="md-close">Close me!</button>
+            <button class="md-close btn btn-default">确认</button>
         </div>
     </div>
 </div>
-<div class="md-modal md-effect-4" id="modal-4">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-5" id="modal-5">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-6" id="modal-6">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-7" id="modal-7">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-8" id="modal-8">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-9" id="modal-9">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-10" id="modal-10">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-11" id="modal-11">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-12" id="modal-12">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-13" id="modal-13">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-14" id="modal-14">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-15" id="modal-15">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-16" id="modal-16">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-17" id="modal-17">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-18" id="modal-18">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-19" id="modal-19">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
-<div class="md-modal md-effect-20" id="modal-20">
-    <div class="md-content">
-        <h3>Modal Dialog</h3>
-        <div>
-            <p>This is a modal window. You can do the following things with it:</p>
-            <ul>
-                <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                <li><strong>Close:</strong> click on the button below to close the modal.</li>
-            </ul>
-            <button class="md-close">Close me!</button>
-        </div>
-    </div>
-</div>
+<!--弹出框结束-->
 <div class="container">
-    <!-- Top Navigation -->
-
-    <header>
-        <h1>Nifty Modal Window Effects <span>Some inspiration for different modal window appearances</span></h1>
-    </header>
-    <div class="main clearfix">
-        <div class="column">
-            <p>There are many possibilities for modal overlays to appear. Here are some modern ways of showing them using CSS transitions and animations.</p>
+    <div class="row">
+        <div class="col-md-2 modal-content" id="left">
+            <img src="static/image/yellow_people.jpg" class="img-responsive"><br/>
+            <span>你好，张三</span><br/>
+            <span>1150310604</span><br/>
+            <span>女</span><br/>
+            <span>计算机科学与技术学院</span><br/>
+            <span>1171163631@qq.com</span><br/>
+            <span>155044661873</span><br/>
+            <a class="pull-right" href="modify.html">编辑</a>
         </div>
-        <div class="column">
-            <button class="md-trigger" data-modal="modal-1">Fade in &amp; Scale</button>
-            <button class="md-trigger" data-modal="modal-2">Slide in (right)</button>
-            <button class="md-trigger" data-modal="modal-3">Slide in (bottom)</button>
-            <button class="md-trigger" data-modal="modal-4">Newspaper</button>
-            <button class="md-trigger" data-modal="modal-5">Fall</button>
-            <button class="md-trigger" data-modal="modal-6">Side Fall</button>
-            <button class="md-trigger" data-modal="modal-7">Sticky Up</button>
-            <button class="md-trigger" data-modal="modal-8">3D Flip (horizontal)</button>
-            <button class="md-trigger" data-modal="modal-9">3D Flip (vertical)</button>
-            <button class="md-trigger" data-modal="modal-10">3D Sign</button>
-            <button class="md-trigger" data-modal="modal-11">Super Scaled</button>
-            <button class="md-trigger" data-modal="modal-12">Just Me</button>
-            <button class="md-trigger" data-modal="modal-13">3D Slit</button>
-            <button class="md-trigger" data-modal="modal-14">3D Rotate Bottom</button>
-            <button class="md-trigger" data-modal="modal-15">3D Rotate In Left</button>
-            <button class="md-trigger" data-modal="modal-16">Blur</button>
-            <!-- special modal that will add a perspective class to the html element -->
-            <button class="md-trigger md-setperspective" data-modal="modal-17">Let me in</button>
-            <button class="md-trigger md-setperspective" data-modal="modal-18">Make way!</button>
-            <button class="md-trigger md-setperspective" data-modal="modal-19">Slip from top</button>
+        <div class="col-md-11 modal-content col-md-offset-2">
+            <br/><br/>
+            <div class="pull-right">
+                <form method="get" action="@Url.Action('form')" data-movies-ajax="true" data-movies-target="#teacherList">
+                    <input id="search" class="form-control" type="search" name="searchTeacher" data-movies-autocomplete="@Url.Action('autoComplete')">
+                </form>
+            </div>
+            <h1 class="text-center">最新消息</h1>
+            <div class="col-md-9 col-md-offset-1 modal-content" id="news">
+
+            </div>
+            <div id="request">
+                <table class="table table-striped table-hover" >
+                    <caption class="text-center"><h2>已发出请求</h2></caption>
+                    <thead style="display:block;border-bottom:1px solid #eee;">
+                    <tr>
+                        <th>日期</th>
+                        <th>时间段</th>
+                        <th>教师</th>
+                        <th>状态</th>
+                        <th>地点</th>
+                        <th>主题</th>
+                        <th>详情</th>
+                    </tr>
+                    </thead>
+                    <tbody style="display:block; max-height:200px;overflow-y: scroll;">
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>已接受</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-1">详情</button></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>未接受</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-2">详情</button></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>被拒绝</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-3">详情</button></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>已接受</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-4">详情</button></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>已接受</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-5">详情</button></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>已接受</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                        <td><button class="md-trigger btn btn-default" data-modal="modal-6">详情</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="published">
+                <table class="table table-striped table-hover" >
+                    <caption class="text-center"><h2>发布预约的教师</h2></caption>
+                    <thead style="display:block;border-bottom:1px solid #eee;">
+                    <tr>
+                        <th>日期</th>
+                        <th>教师</th>
+                        <th>学院</th>
+                        <th>地点</th>
+                        <th>是否预约</th>
+                    </tr>
+                    </thead>
+                    <tbody style="display:block; max-height:200px;overflow-y: scroll;">
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="finished">
+                <table class="table table-striped table-hover" >
+                    <caption class="text-center"><h2>已发出请求</h2></caption>
+                    <thead style="display:block;border-bottom:1px solid #eee;">
+                    <tr>
+                        <th>日期</th>
+                        <th>时间段</th>
+                        <th>教师</th>
+                        <th>地点</th>
+                        <th>主题</th>
+                    </tr>
+                    </thead>
+                    <tbody style="display:block; max-height:200px;overflow-y: scroll;">
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td><a href="self_page.html" target="_blank">张三</a></td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>13:00-13:30</td>
+                        <td>张三</td>
+                        <td>综合楼</td>
+                        <td>机器学习</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div><!-- /container -->
-<div class="md-overlay"></div><!-- the overlay element -->
-
-
-<table cellspacing="0" cellpadding="0" width="100%" border="0"><tr><td align="left">
-    <!--select标签和input外面的span标签的格式是为了使两个位置在同一位置，控制位置-->
-<span style="position:absolute;border:1pt solid #c1c1c1;overflow:hidden;width:188px;height:19px;clip:rect(-1px 190px 190px 170px);">
-<select name="aabb" id="aabb" style="width:190px;height:20px;margin:-2px;"
-        onChange="javascript:document.getElementById('ccdd').value=document.getElementById('aabb').options[document.getElementById('aabb').selectedIndex].value;">
-    <!--下面的option的样式是为了使字体为灰色，只是视觉问题，看起来像是注释一样-->
-    <option value="" style="color:#c2c2c2;">---请选择---</option>
-    <option value="闲人书库">闲人书库</option>
-    <option value="闲人BLOG">闲人BLOG</option>
-    <option value="闲人设计">闲人设计</option>
-    <option value="闲人软件">闲人软件</option>
-</select>
-</span>
-<span style="position:absolute;border-top:1pt solid #c1c1c1;border-left:1pt solid #c1c1c1;border-bottom:1pt solid #c1c1c1;width:170px;height:19px;">
-<input type="text" name="ccdd" id="ccdd" value="可选择也可输入的下拉框" style="width:170px;height:15px;border:0pt;">
-</span>
-
-</td></tr></table>
-<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+</div>
+<div class="md-overlay"></div>
+<!--jquery bootstrap jquery-ui js文件引入-->
+<script src="static/js/jquery-3.1.1.min.js"></script>
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script src="static/js/jquery-ui.min.js"></script>
+<!--niftyModal js文件引入及必要操作-->
 <script src="static/niftyModal/js/classie.js"></script>
 <script src="static/niftyModal/js/modalEffects.js"></script>
-
-<!-- for the blur effect -->
-<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
 <script>
-    // this is important for IEs
     var polyfilter_scriptpath = '/js/';
 </script>
-<script src="static/niftyModal/js/cssParser.js"></script>
 <script src="static/niftyModal/js/css-filters-polyfill.js"></script>
+<!--自己的js-->
+<script>
+
+    $(document).ready(function(){
+        var _width=$('#request').width();
+        $("#left").css("left",$(window).width()*0.1);
+        var table_th=$("#request th");
+        var table_td=$("#request td");
+        table_th.eq(0).width(_width*0.15);
+        table_td.eq(0).width(_width*0.15);
+        table_th.eq(1).width(_width*0.15);
+        table_td.eq(1).width(_width*0.15);
+        table_th.eq(2).width(_width*0.05);
+        table_td.eq(2).width(_width*0.05);
+        table_th.eq(3).width(_width*0.08);
+        table_td.eq(3).width(_width*0.08);
+        table_th.eq(4).width(_width*0.1);
+        table_td.eq(4).width(_width*0.1);
+        table_th.eq(5).width(_width*0.25);
+        table_td.eq(5).width(_width*0.25);
+        table_th.eq(6).width(_width*0.12);
+        table_td.eq(6).width(_width*0.12);
+        table_th.eq(7).width(_width*0.05);
+        table_td.eq(7).width(_width*0.05);
+        var table_pth=$("#published th");
+        var table_ptd=$("#published td");
+        table_pth.eq(0).width(_width*0.2);
+        table_ptd.eq(0).width(_width*0.2);
+        table_pth.eq(1).width(_width*0.2);
+        table_ptd.eq(1).width(_width*0.2);
+        table_pth.eq(2).width(_width*0.15);
+        table_ptd.eq(2).width(_width*0.15);
+        table_pth.eq(3).width(_width*0.25);
+        table_ptd.eq(3).width(_width*0.25);
+        table_pth.eq(4).width(_width*0.2);
+        table_ptd.eq(4).width(_width*0.2);
+        var table_rth=$("#finished th");
+        var table_rtd=$("#finished td");
+        table_rth.eq(0).width(_width*0.2);
+        table_rtd.eq(0).width(_width*0.2);
+        table_rth.eq(1).width(_width*0.2);
+        table_rtd.eq(1).width(_width*0.2);
+        table_rth.eq(2).width(_width*0.2);
+        table_rtd.eq(2).width(_width*0.2);
+        table_rth.eq(3).width(_width*0.2);
+        table_rtd.eq(3).width(_width*0.2);
+        table_rth.eq(4).width(_width*0.2);
+        table_rtd.eq(4).width(_width*0.2);
+    });
+
+    var createAutoComplete=function(){
+        var $input=$(this);
+        var options={
+            select:$input.submit,
+//            source:$input.attr("data-movies-autocomplete")
+            source:["李志琛","张岩","王方帅","覃艳美"]
+        };
+        $input.autocomplete(options);
+    };
+    $("#id").createAutoComplete();
+</script>
 </body>
 </html>

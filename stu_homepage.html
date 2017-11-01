@@ -121,6 +121,11 @@
         </div>
         <div class="col-md-11 modal-content col-md-offset-2">
             <br/><br/>
+            <div class="pull-right">
+                <form method="get" action="@Url.Action('form')" data-movies-ajax="true" data-movies-target="#teacherList">
+                    <input id="search" class="form-control" type="search" name="searchTeacher" data-movies-autocomplete="@Url.Action('autoComplete')">
+                </form>
+            </div>
             <h1 class="text-center">最新消息</h1>
             <div class="col-md-9 col-md-offset-1 modal-content" id="news">
 
@@ -198,62 +203,62 @@
                 </table>
             </div>
             <div id="published">
-            <table class="table table-striped table-hover" >
-                <caption class="text-center"><h2>发布预约的教师</h2></caption>
-                <thead style="display:block;border-bottom:1px solid #eee;">
-                <tr>
-                    <th>日期</th>
-                    <th>教师</th>
-                    <th>学院</th>
-                    <th>地点</th>
-                    <th>是否预约</th>
-                </tr>
-                </thead>
-                <tbody style="display:block; max-height:200px;overflow-y: scroll;">
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                <tr>
-                    <td>2002-01-12</td>
-                    <td>张岩</td>
-                    <td>数学</td>
-                    <td>综合楼</td>
-                    <td><a href="request_order.html" class="btn btn-default">预约</a></td>
-                </tr>
-                </tbody>
-            </table>
+                <table class="table table-striped table-hover" >
+                    <caption class="text-center"><h2>发布预约的教师</h2></caption>
+                    <thead style="display:block;border-bottom:1px solid #eee;">
+                    <tr>
+                        <th>日期</th>
+                        <th>教师</th>
+                        <th>学院</th>
+                        <th>地点</th>
+                        <th>是否预约</th>
+                    </tr>
+                    </thead>
+                    <tbody style="display:block; max-height:200px;overflow-y: scroll;">
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    <tr>
+                        <td>2002-01-12</td>
+                        <td>张岩</td>
+                        <td>数学</td>
+                        <td>综合楼</td>
+                        <td><a href="request_order.html" class="btn btn-default">预约</a></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div id="finished">
                 <table class="table table-striped table-hover" >
@@ -330,6 +335,7 @@
 <script src="static/niftyModal/js/css-filters-polyfill.js"></script>
 <!--自己的js-->
 <script>
+
     $(document).ready(function(){
         var _width=$('#request').width();
         $("#left").css("left",$(window).width()*0.1);
@@ -375,7 +381,18 @@
         table_rtd.eq(3).width(_width*0.2);
         table_rth.eq(4).width(_width*0.2);
         table_rtd.eq(4).width(_width*0.2);
-    })
+    });
+
+    var createAutoComplete=function(){
+        var $input=$(this);
+        var options={
+            select:$input.submit,
+//            source:$input.attr("data-movies-autocomplete")
+            source:["李志琛","张岩","王方帅","覃艳美"]
+        };
+        $input.autocomplete(options);
+    };
+    $("#id").createAutoComplete();
 </script>
 </body>
 </html>
